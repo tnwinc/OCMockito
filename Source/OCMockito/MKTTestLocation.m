@@ -26,7 +26,7 @@ void MKTFailTest(id testCase, const char *fileName, int lineNumber, NSString *de
     NSException *failure = [MKTException failureInFile:theFileName
                                                 atLine:lineNumber
                                                 reason:description];
-    [testCase failWithException:failure];
+    [failure raise];
 }
 
 void MKTFailTestLocation(MKTTestLocation testLocation, NSString *description)
